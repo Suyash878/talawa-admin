@@ -1,4 +1,5 @@
 import React from 'react';
+import { describe, test, expect, vi } from 'vitest';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import {
   ApolloClient,
@@ -42,22 +43,22 @@ const client: ApolloClient<NormalizedCacheObject> = new ApolloClient({
   link: ApolloLink.from([httpLink]),
 });
 
-const mockUseMutation = jest.fn();
-jest.mock('@apollo/client', () => {
-  const originalModule = jest.requireActual('@apollo/client');
+const mockUseMutation = vi.fn();
+vi.mock('@apollo/client', () => {
+  const originalModule = vi.importActual('@apollo/client');
   return {
     ...originalModule,
     useMutation: () => mockUseMutation(),
   };
 });
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+vi.mock('react-router-dom', () => ({
+  ...vi.importActual('react-router-dom'),
   useParams: () => ({ orgId: '1' }),
 }));
 
 describe('Testing Advertisement Entry Component', () => {
   test('Testing rendering and deleting of advertisement', async () => {
-    const deleteAdByIdMock = jest.fn();
+    const deleteAdByIdMock = vi.fn();
     mockUseMutation.mockReturnValue([deleteAdByIdMock]);
     const { getByTestId, getAllByText } = render(
       <ApolloProvider client={client}>
@@ -73,7 +74,7 @@ describe('Testing Advertisement Entry Component', () => {
                 name="Advert1"
                 organizationId="1"
                 type="POPUP"
-                setAfter={jest.fn()}
+                setAfter={vi.fn()}
               />
             </I18nextProvider>
           </BrowserRouter>
@@ -203,7 +204,7 @@ describe('Testing Advertisement Entry Component', () => {
                 name="Advert1"
                 organizationId="1"
                 type="POPUP"
-                setAfter={jest.fn()}
+                setAfter={vi.fn()}
               />
             </I18nextProvider>
           </BrowserRouter>
@@ -236,7 +237,7 @@ describe('Testing Advertisement Entry Component', () => {
   });
 
   test('Updates the advertisement and shows success toast on successful update', async () => {
-    const updateAdByIdMock = jest.fn().mockResolvedValue({
+    const updateAdByIdMock = vi.fn().mockResolvedValue({
       data: {
         updateAdvertisement: {
           advertisement: {
@@ -266,7 +267,7 @@ describe('Testing Advertisement Entry Component', () => {
                 organizationId="1"
                 mediaUrl=""
                 id="1"
-                setAfter={jest.fn()}
+                setAfter={vi.fn()}
               />
             </I18nextProvider>
           </BrowserRouter>
@@ -313,7 +314,7 @@ describe('Testing Advertisement Entry Component', () => {
   });
 
   test('Simulating if the mutation doesnt have data variable while updating', async () => {
-    const updateAdByIdMock = jest.fn().mockResolvedValue({
+    const updateAdByIdMock = vi.fn().mockResolvedValue({
       updateAdvertisement: {
         _id: '1',
         name: 'Updated Advertisement',
@@ -336,7 +337,7 @@ describe('Testing Advertisement Entry Component', () => {
                 organizationId="1"
                 mediaUrl=""
                 id="1"
-                setAfter={jest.fn()}
+                setAfter={vi.fn()}
               />
             </I18nextProvider>
           </BrowserRouter>
@@ -376,11 +377,11 @@ describe('Testing Advertisement Entry Component', () => {
     Object.defineProperty(window, 'location', {
       configurable: true,
       value: {
-        reload: jest.fn(),
+        reload: vi.fn(),
         href: 'https://example.com/page/id=1',
       },
     });
-    const createAdByIdMock = jest.fn().mockResolvedValue({
+    const createAdByIdMock = vi.fn().mockResolvedValue({
       data1: {
         createAdvertisement: {
           _id: '1',
@@ -397,7 +398,7 @@ describe('Testing Advertisement Entry Component', () => {
             <I18nextProvider i18n={i18nForTest}>
               {
                 <AdvertisementRegister
-                  setAfter={jest.fn()}
+                  setAfter={vi.fn()}
                   formStatus="register"
                 />
               }
@@ -450,7 +451,7 @@ describe('Testing Advertisement Entry Component', () => {
     });
   });
   test('delet advertisement', async () => {
-    const deleteAdByIdMock = jest.fn();
+    const deleteAdByIdMock = vi.fn();
     const mocks = [
       {
         request: {
@@ -576,7 +577,7 @@ describe('Testing Advertisement Entry Component', () => {
                   name="Advert1"
                   organizationId="1"
                   type="POPUP"
-                  setAfter={jest.fn()}
+                  setAfter={vi.fn()}
                 />
               </MockedProvider>
             </I18nextProvider>
