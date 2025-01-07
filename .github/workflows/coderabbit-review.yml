@@ -21,14 +21,18 @@ jobs:
   pr-approval-trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if PR has been approved by coderabbitai
+      - name: Check if PR has been approved by CodeRabbit.ai
         if: ${{ github.event_name == 'pull_request_review' && github.event.review.state == 'approved' }}
         run: echo "This PR was approved by CodeRabbit.ai"
 
-      - name: Check if PR is not approved by coderabbitai
+      - name: Fail if PR is not approved by CodeRabbit.ai
         if: ${{ github.event_name == 'pull_request_review' && github.event.review.state != 'approved' }}
-        run: echo "This PR was not approved by CodeRabbit.ai"
+        run: |
+          echo "This PR was not approved by CodeRabbit.ai"
+          exit 1  # Fail the workflow if the review is not approved
 
-      - name: Handle PR without review submission
+      - name: Fail if PR has not been reviewed by CodeRabbit.ai
         if: ${{ github.event_name == 'pull_request' }}
-        run: echo "This PR has not yet been reviewed by coderabbitai"
+        run: |
+          echo "This PR has not yet been reviewed by CodeRabbit.ai"
+          exit 1  # Fail the workflow if no review has been submitted
