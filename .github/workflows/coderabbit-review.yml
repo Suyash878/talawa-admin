@@ -1,0 +1,34 @@
+##############################################################################
+##############################################################################
+#
+# NOTE!
+#
+# Please read the README.md file in this directory that defines what should
+# be placed in this file
+#
+##############################################################################
+##############################################################################
+
+name: PR Review Status Trigger
+
+on:
+  pull_request_review:
+    types: [submitted]
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  pr-approval-trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR has been approved by coderabbitai
+        if: ${{ github.event_name == 'pull_request_review' && github.event.review.state == 'approved' }}
+        run: echo "This PR was approved by CodeRabbit.ai"
+
+      - name: Check if PR is not approved by coderabbitai
+        if: ${{ github.event_name == 'pull_request_review' && github.event.review.state != 'approved' }}
+        run: echo "This PR was not approved by CodeRabbit.ai"
+
+      - name: Handle PR without review submission
+        if: ${{ github.event_name == 'pull_request' }}
+        run: echo "This PR has not yet been reviewed by coderabbitai"
