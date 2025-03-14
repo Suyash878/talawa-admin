@@ -24,3 +24,25 @@ reviews:
     - "!*.md"
     - "!*.svg" 
 
+# Add test generation configuration
+test_generation:
+  enabled: true
+  frameworks:
+    - jest  # For React-based components (Talawa-Admin)
+    - mocha # If used in any parts of the codebase
+  file_patterns:
+    component: "**/*.{jsx,tsx,js,ts}"
+    test: "{__tests__,tests}/**/*.test.{js,ts,jsx,tsx}"
+  coverage_targets:
+    - "src/"
+    - "lib/"
+    - "components/"
+  exclude:
+    - "node_modules/"
+    - "dist/"
+    - "build/"
+  options:
+    prioritize_uncovered: true
+    mock_dependencies: true
+    generate_snapshots: false
+    test_naming_convention: "describe_it"
