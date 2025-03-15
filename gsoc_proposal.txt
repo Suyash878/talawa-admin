@@ -1,0 +1,6 @@
+Enhancing The Talawa Testing
+Enhancing Testing Strategy for Talawa Codebases: AI-Driven Testing, Memory Optimization, and End-to-End Testing
+1.1- Abstract
+The current codebase suffers from significant test coverage gaps that pose increasing risk to project stability and quality. Manual approaches to addressing these gaps have proven ineffective—they're inconsistent, time-consuming, and frequently abandoned when development pressures mount. Without a systematic approach, untested components continue to accumulate, particularly in critical areas like authentication, data processing, and core business logic.
+1.2- What Exists?
+Currently the Talawa-Admin, Talawa Mobile, and Talawa have a huge pile of untested code that needs to be tested. And the tests are being manually added by contributors, which is a problem 
