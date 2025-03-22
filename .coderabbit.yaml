@@ -23,4 +23,3 @@ reviews:
     - "!*.html"
     - "!*.md"
     - "!*.svg" 
-
