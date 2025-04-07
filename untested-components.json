@@ -1,6 +1,6 @@
 [
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/fix-readme-links.js",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/fix-readme-links.js",
     "coveragePercentage": "0.00",
     "lines": 12,
     "coveredLines": 0,
@@ -18,7 +18,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/fix-repo-url.js",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/fix-repo-url.js",
     "coveragePercentage": "0.00",
     "lines": 12,
     "coveredLines": 0,
@@ -36,7 +36,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/.github/workflows/check-tsdoc.js",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/.github/workflows/check-tsdoc.js",
     "coveragePercentage": "0.00",
     "lines": 29,
     "coveredLines": 0,
@@ -54,7 +54,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/config/babel.config.cjs",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/config/babel.config.cjs",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -72,7 +72,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/docs/docusaurus.config.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/docs/docusaurus.config.ts",
     "coveragePercentage": "0.00",
     "lines": 2,
     "coveredLines": 0,
@@ -90,7 +90,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/docs/sidebars.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/docs/sidebars.ts",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -108,7 +108,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/docs/src/components/layout/HeaderHero.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/docs/src/components/layout/HeaderHero.tsx",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -126,7 +126,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/docs/src/pages/index.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/docs/src/pages/index.tsx",
     "coveragePercentage": "0.00",
     "lines": 3,
     "coveredLines": 0,
@@ -144,7 +144,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/docs/src/utils/ActionButton.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/docs/src/utils/ActionButton.tsx",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -162,7 +162,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/docs/src/utils/HomeCallToAction.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/docs/src/utils/HomeCallToAction.tsx",
     "coveragePercentage": "0.00",
     "lines": 2,
     "coveredLines": 0,
@@ -180,25 +180,25 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/analyze-coverage.mjs",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/analyze-coverage.js",
     "coveragePercentage": "0.00",
-    "lines": 13,
+    "lines": 20,
     "coveredLines": 0,
     "statements": {
       "covered": 0,
-      "total": 13
+      "total": 20
     },
     "branches": {
       "covered": 0,
-      "total": 1
+      "total": 8
     },
     "functions": {
       "covered": 0,
-      "total": 1
+      "total": 5
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/custom-test-env.js",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/custom-test-env.js",
     "coveragePercentage": "0.00",
     "lines": 4,
     "coveredLines": 0,
@@ -216,7 +216,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/__mocks__/fileMock.js",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/__mocks__/fileMock.js",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -234,7 +234,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/__mocks__/@dicebear/collection.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/__mocks__/@dicebear/collection.ts",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -252,7 +252,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/__mocks__/@dicebear/core.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/__mocks__/@dicebear/core.ts",
     "coveragePercentage": "0.00",
     "lines": 3,
     "coveredLines": 0,
@@ -270,7 +270,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/__mocks__/@pdfme/generator.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/__mocks__/@pdfme/generator.ts",
     "coveragePercentage": "0.00",
     "lines": 8,
     "coveredLines": 0,
@@ -288,7 +288,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/githooks/check-localstorage-usage.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/githooks/check-localstorage-usage.ts",
     "coveragePercentage": "0.00",
     "lines": 44,
     "coveredLines": 0,
@@ -306,7 +306,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/scripts/githooks/update-toc.js",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/scripts/githooks/update-toc.js",
     "coveragePercentage": "0.00",
     "lines": 6,
     "coveredLines": 0,
@@ -324,7 +324,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/App.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/App.tsx",
     "coveragePercentage": "55.68",
     "lines": 88,
     "coveredLines": 49,
@@ -342,7 +342,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/index.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/index.tsx",
     "coveragePercentage": "0.00",
     "lines": 26,
     "coveredLines": 0,
@@ -360,7 +360,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/reportWebVitals.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/reportWebVitals.ts",
     "coveragePercentage": "0.00",
     "lines": 7,
     "coveredLines": 0,
@@ -378,7 +378,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/setupTests.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/setupTests.ts",
     "coveragePercentage": "0.00",
     "lines": 10,
     "coveredLines": 0,
@@ -396,7 +396,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/AgendaItems/AgendaItemsContainer.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/components/AgendaItems/AgendaItemsContainer.tsx",
     "coveragePercentage": "76.92",
     "lines": 65,
     "coveredLines": 50,
@@ -414,7 +414,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventCalender/Header/EventHeader.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/components/EventCalender/Header/EventHeader.tsx",
     "coveragePercentage": "75.00",
     "lines": 4,
     "coveredLines": 3,
@@ -432,7 +432,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventCalender/Monthly/EventCalender.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/components/EventCalender/Monthly/EventCalender.tsx",
     "coveragePercentage": "71.76",
     "lines": 131,
     "coveredLines": 94,
@@ -450,115 +450,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventListCard/Modal/coverage/vitest/block-navigation.js",
-    "coveragePercentage": "0.00",
-    "lines": 30,
-    "coveredLines": 0,
-    "statements": {
-      "covered": 0,
-      "total": 30
-    },
-    "branches": {
-      "covered": 0,
-      "total": 8
-    },
-    "functions": {
-      "covered": 0,
-      "total": 6
-    }
-  },
-  {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventListCard/Modal/coverage/vitest/prettify.js",
-    "coveragePercentage": "0.00",
-    "lines": 536,
-    "coveredLines": 0,
-    "statements": {
-      "covered": 0,
-      "total": 536
-    },
-    "branches": {
-      "covered": 0,
-      "total": 139
-    },
-    "functions": {
-      "covered": 0,
-      "total": 29
-    }
-  },
-  {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventListCard/Modal/coverage/vitest/sorter.js",
-    "coveragePercentage": "0.00",
-    "lines": 90,
-    "coveredLines": 0,
-    "statements": {
-      "covered": 0,
-      "total": 90
-    },
-    "branches": {
-      "covered": 0,
-      "total": 12
-    },
-    "functions": {
-      "covered": 0,
-      "total": 19
-    }
-  },
-  {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventListCard/Modal/coverage/vitest/lcov-report/block-navigation.js",
-    "coveragePercentage": "0.00",
-    "lines": 30,
-    "coveredLines": 0,
-    "statements": {
-      "covered": 0,
-      "total": 30
-    },
-    "branches": {
-      "covered": 0,
-      "total": 8
-    },
-    "functions": {
-      "covered": 0,
-      "total": 6
-    }
-  },
-  {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventListCard/Modal/coverage/vitest/lcov-report/prettify.js",
-    "coveragePercentage": "0.00",
-    "lines": 536,
-    "coveredLines": 0,
-    "statements": {
-      "covered": 0,
-      "total": 536
-    },
-    "branches": {
-      "covered": 0,
-      "total": 139
-    },
-    "functions": {
-      "covered": 0,
-      "total": 29
-    }
-  },
-  {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/EventListCard/Modal/coverage/vitest/lcov-report/sorter.js",
-    "coveragePercentage": "0.00",
-    "lines": 90,
-    "coveredLines": 0,
-    "statements": {
-      "covered": 0,
-      "total": 90
-    },
-    "branches": {
-      "covered": 0,
-      "total": 12
-    },
-    "functions": {
-      "covered": 0,
-      "total": 19
-    }
-  },
-  {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/LoginPortalToggle/LoginPortalToggle.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/components/LoginPortalToggle/LoginPortalToggle.tsx",
     "coveragePercentage": "50.00",
     "lines": 8,
     "coveredLines": 4,
@@ -576,7 +468,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/OrgListCard/useDebounce.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/components/OrgListCard/useDebounce.tsx",
     "coveragePercentage": "50.00",
     "lines": 10,
     "coveredLines": 5,
@@ -594,7 +486,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/OrgSettings/General/OrgUpdate/OrgUpdateMocks.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/components/OrgSettings/General/OrgUpdate/OrgUpdateMocks.ts",
     "coveragePercentage": "0.00",
     "lines": 3,
     "coveredLines": 0,
@@ -612,7 +504,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/components/SecuredRoute/SecuredRoute.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/components/SecuredRoute/SecuredRoute.tsx",
     "coveragePercentage": "63.16",
     "lines": 19,
     "coveredLines": 12,
@@ -630,7 +522,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/screens/FundCampaignPledge/modal/PledgeModal.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/screens/FundCampaignPledge/modal/PledgeModal.tsx",
     "coveragePercentage": "54.24",
     "lines": 59,
     "coveredLines": 32,
@@ -648,7 +540,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/screens/OrgSettings/OrgSettings.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/screens/OrgSettings/OrgSettings.tsx",
     "coveragePercentage": "78.57",
     "lines": 14,
     "coveredLines": 11,
@@ -666,7 +558,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/screens/OrganizationDashboard/Leaderboard/Leaderboard.mocks.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/screens/OrganizationDashboard/Leaderboard/Leaderboard.mocks.ts",
     "coveragePercentage": "0.00",
     "lines": 7,
     "coveredLines": 0,
@@ -684,7 +576,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/screens/UserPortal/Campaigns/PledgeModal.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/screens/UserPortal/Campaigns/PledgeModal.tsx",
     "coveragePercentage": "57.63",
     "lines": 59,
     "coveredLines": 34,
@@ -702,7 +594,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/screens/UserPortal/Settings/Settings.tsx",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/screens/UserPortal/Settings/Settings.tsx",
     "coveragePercentage": "53.01",
     "lines": 83,
     "coveredLines": 44,
@@ -720,7 +612,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/setup/askForDocker/askForDocker.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/setup/askForDocker/askForDocker.ts",
     "coveragePercentage": "60.42",
     "lines": 48,
     "coveredLines": 29,
@@ -738,7 +630,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/types/Advertisement/type.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/types/Advertisement/type.ts",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -756,7 +648,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/types/Event/type.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/types/Event/type.ts",
     "coveragePercentage": "0.00",
     "lines": 2,
     "coveredLines": 0,
@@ -774,7 +666,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/types/Post/type.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/types/Post/type.ts",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -792,7 +684,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/utils/fieldTypes.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/utils/fieldTypes.ts",
     "coveragePercentage": "0.00",
     "lines": 1,
     "coveredLines": 0,
@@ -810,7 +702,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/utils/getOrganizationId.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/utils/getOrganizationId.ts",
     "coveragePercentage": "0.00",
     "lines": 3,
     "coveredLines": 0,
@@ -828,7 +720,7 @@
     }
   },
   {
-    "filePath": "/home/suyash/Desktop/talawa-admin/src/utils/interfaces.ts",
+    "filePath": "/home/runner/work/talawa-admin/talawa-admin/src/utils/interfaces.ts",
     "coveragePercentage": "0.00",
     "lines": 296,
     "coveredLines": 0,
