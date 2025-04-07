@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Fetch all history to properly determine base
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
@@ -34,6 +36,7 @@ jobs:
         with:
           title: "Test Coverage Enhancement - Week $(date +%Y-%m-%d)"
           branch: test-coverage-week-$(date +%Y-%m-%d)
+          base: ${{ github.event.pull_request.base.ref || github.ref_name }}  # Use PR base branch or current branch
           commit-message: "test: add coverage improvements"
           add-paths: |
             untested-components.json
@@ -52,6 +55,7 @@ jobs:
             testing
             automated-pr
       - name: Trigger CodeRabbit
+        if: ${{ success() && github.event_name != 'pull_request' }}  # Don't run this step on PRs
         run: |
           PR_NUMBER=$(gh pr view --json number -q '.number')
           UNTESTED_COMPONENTS=$(cat untested-components.json)
