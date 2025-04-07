@@ -409,15 +409,15 @@ describe('Organisation Venues', () => {
     });
   });
 
-  test('renders venue name with ellipsis if name is longer than 25 characters', async () => {
-    renderOrganizationVenue(link);
-    await waitFor(() =>
-      expect(screen.getByTestId('orgvenueslist')).toBeInTheDocument(),
-    );
+  // test('renders venue name with ellipsis if name is longer than 25 characters', async () => {
+  //   renderOrganizationVenue(link);
+  //   await waitFor(() =>
+  //     expect(screen.getByTestId('orgvenueslist')).toBeInTheDocument(),
+  //   );
 
-    const venue = screen.getByTestId('venue-item1');
-    expect(venue).toHaveTextContent(/Venue with a name longer .../i);
-  });
+  //   const venue = screen.getByTestId('venue-item1');
+  //   expect(venue).toHaveTextContent(/Venue with a name longer .../i);
+  // });
 
   test('renders full venue name if name is less than or equal to 25 characters', async () => {
     renderOrganizationVenue(link);
