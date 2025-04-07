@@ -29,30 +29,6 @@ jobs:
       - name: Identify untested components
         run: |
           node scripts/analyze-coverage.js
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          title: "Test Coverage Enhancement"
-          branch: test-coverage-week
-          base: ${{ github.event.pull_request.base.ref || github.ref_name }}  # Use PR base branch or current branch
-          commit-message: "test: add coverage improvements"
-          add-paths: |
-            untested-components.json
-          body: |
-            🧪 Test Coverage Enhancement    
-            
-            This PR was automatically generated to improve test coverage.
-            Please review the changes and modify as needed.
-            Coverage Report Summary:
-            - [ ] Review generated tests
-            - [ ] Add missing test cases
-            - [ ] Ensure all tests pass
-            
-            The untested components are listed in `untested-components.json`.
-          labels: |
-            testing
-            automated-pr
-
       - name: Trigger CodeRabbit
         run: |
           if [ "${{ github.event_name }}" == "pull_request" ]; then
