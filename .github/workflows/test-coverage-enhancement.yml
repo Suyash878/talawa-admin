@@ -22,8 +22,6 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
-      - name: Run tests with coverage
-        run: npx vitest run --coverage
       - name: Generate coverage report
         run: |
           npx vitest run --coverage --coverage.reporter=json
@@ -55,7 +53,7 @@ jobs:
             testing
             automated-pr
       - name: Trigger CodeRabbit
-        if: ${{ success() && github.event_name != 'pull_request' }}  # Don't run this step on PRs
+        if: ${{ success() && github.event_name != 'pull_request' }}  
         run: |
           PR_NUMBER=$(gh pr view --json number -q '.number')
           UNTESTED_COMPONENTS=$(cat untested-components.json)
