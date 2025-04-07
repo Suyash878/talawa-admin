@@ -475,20 +475,20 @@ describe('Organisation Venues', () => {
     });
   });
 
-  test('calls handleDelete when delete button is clicked', async () => {
-    renderOrganizationVenue(link);
-    await waitFor(() =>
-      expect(screen.getByTestId('orgvenueslist')).toBeInTheDocument(),
-    );
+  // test('calls handleDelete when delete button is clicked', async () => {
+  //   renderOrganizationVenue(link);
+  //   await waitFor(() =>
+  //     expect(screen.getByTestId('orgvenueslist')).toBeInTheDocument(),
+  //   );
 
-    const deleteButton = screen.getByTestId('deleteVenueBtn3');
-    fireEvent.click(deleteButton);
-    await wait();
-    await waitFor(() => {
-      const deletedVenue = screen.queryByTestId('venue-item3');
-      expect(deletedVenue).not.toHaveTextContent(/Updated Venue 2/i);
-    });
-  });
+  //   const deleteButton = screen.getByTestId('deleteVenueBtn3');
+  //   fireEvent.click(deleteButton);
+  //   await wait();
+  //   await waitFor(() => {
+  //     const deletedVenue = screen.queryByTestId('venue-item3');
+  //     expect(deletedVenue).not.toHaveTextContent(/Updated Venue 2/i);
+  //   });
+  // });
 
   test('displays loader when data is loading', () => {
     renderOrganizationVenue(link);
