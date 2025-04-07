@@ -63,4 +63,4 @@ jobs:
           UNTESTED_COMPONENTS=$(cat untested-components.json)
           gh pr comment $PR_NUMBER --body "@coderabbitai generate tests for these untested files: \`\`\`json\n${UNTESTED_COMPONENTS}\n\`\`\`"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}
