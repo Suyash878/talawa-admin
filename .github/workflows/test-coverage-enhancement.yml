@@ -14,14 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Fetch all history to properly determine base
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: '20'
       - name: Install dependencies
         run: npm install
-      - name: Run tests with coverage
-        run: npx vitest run --coverage
       - name: Generate coverage report
         run: |
           npx vitest run --coverage --coverage.reporter=json
@@ -34,6 +34,7 @@ jobs:
         with:
           title: "Test Coverage Enhancement"
           branch: test-coverage-week
+          base: ${{ github.event.pull_request.base.ref || github.ref_name }}  # Use PR base branch or current branch
           commit-message: "test: add coverage improvements"
           add-paths: |
             untested-components.json
@@ -52,6 +53,7 @@ jobs:
             testing
             automated-pr
       - name: Trigger CodeRabbit
+        if: ${{ success() && github.event_name != 'pull_request' }}  
         run: |
           PR_NUMBER=$(gh pr view --json number -q '.number')
           UNTESTED_COMPONENTS=$(cat untested-components.json)
