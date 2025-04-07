@@ -32,8 +32,8 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          title: "Test Coverage Enhancement - Week $(date +%Y-%m-%d)"
-          branch: test-coverage-week-$(date +%Y-%m-%d)
+          title: "Test Coverage Enhancement"
+          branch: test-coverage-week
           base: ${{ github.event.pull_request.base.ref || github.ref_name }}  # Use PR base branch or current branch
           commit-message: "test: add coverage improvements"
           add-paths: |
