@@ -52,10 +52,14 @@ jobs:
           labels: |
             testing
             automated-pr
+
       - name: Trigger CodeRabbit
-        if: ${{ success() && github.event_name != 'pull_request' }}  
         run: |
-          PR_NUMBER=$(gh pr view --json number -q '.number')
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            PR_NUMBER=${{ github.event.pull_request.number }}
+          else
+            PR_NUMBER=$(gh pr view --json number -q '.number')
+          fi
           UNTESTED_COMPONENTS=$(cat untested-components.json)
           gh pr comment $PR_NUMBER --body "@coderabbitai generate tests for these untested files: \`\`\`json\n${UNTESTED_COMPONENTS}\n\`\`\`"
         env:
