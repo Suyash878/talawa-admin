@@ -1,0 +1,60 @@
+name: Test Coverage Enhancement
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Runs every Monday at midnight
+  workflow_dispatch: # Allows manual triggering
+  pull_request: # Run on all PRs
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+jobs:
+  analyze-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install
+      - name: Run tests with coverage
+        run: npx vitest run --coverage
+      - name: Generate coverage report
+        run: |
+          npx vitest run --coverage --coverage.reporter=json
+          mv coverage/vitest/coverage-final.json coverage-report.json
+      - name: Identify untested components
+        run: |
+          node scripts/analyze-coverage.js
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: "Test Coverage Enhancement - Week $(date +%Y-%m-%d)"
+          branch: test-coverage-week-$(date +%Y-%m-%d)
+          commit-message: "test: add coverage improvements"
+          add-paths: |
+            untested-components.json
+          body: |
+            🧪 Test Coverage Enhancement    
+            
+            This PR was automatically generated to improve test coverage.
+            Please review the changes and modify as needed.
+            Coverage Report Summary:
+            - [ ] Review generated tests
+            - [ ] Add missing test cases
+            - [ ] Ensure all tests pass
+            
+            The untested components are listed in `untested-components.json`.
+          labels: |
+            testing
+            automated-pr
+      - name: Trigger CodeRabbit
+        run: |
+          PR_NUMBER=$(gh pr view --json number -q '.number')
+          UNTESTED_COMPONENTS=$(cat untested-components.json)
+          gh pr comment $PR_NUMBER --body "@coderabbitai generate tests for these untested files: \`\`\`json\n${UNTESTED_COMPONENTS}\n\`\`\`"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
